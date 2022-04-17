@@ -15,25 +15,19 @@ using System.Windows.Shapes;
 
 namespace KFC
 {
-   
-    public partial class ContentMenu : Page
+    /// <summary>
+    /// Логика взаимодействия для Basket.xaml
+    /// </summary>
+    public partial class Basket : Page
     {
-        public ContentMenu()
+        public Basket()
         {
             InitializeComponent();
         }
 
-        private void BasketButton_Click(object sender, RoutedEventArgs e)
-        {// с меню на корзину
-            NavigationService nav = NavigationService.GetNavigationService(this);
-            nav.Navigate(new Basket());
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
-        {//с меню на ЛогонЛист
-            NavigationService nav = NavigationService.GetNavigationService(this);
-            nav.Navigate(new LogonList());
+        {
+            //функция, стирает все с скролл меню, дает инд. номер и кидает все повару
         }
     }
 }

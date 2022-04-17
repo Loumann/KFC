@@ -15,24 +15,22 @@ using System.Windows.Shapes;
 
 namespace KFC
 {
-   
-    public partial class ContentMenu : Page
+    /// <summary>
+    /// Логика взаимодействия для CookPanel.xaml
+    /// </summary>
+    public partial class CookPanel : Page
     {
-        public ContentMenu()
+
+
+      
+        public CookPanel()
         {
             InitializeComponent();
         }
 
-        private void BasketButton_Click(object sender, RoutedEventArgs e)
-        {// с меню на корзину
-            NavigationService nav = NavigationService.GetNavigationService(this);
-            nav.Navigate(new Basket());
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
-        {//с меню на ЛогонЛист
-            NavigationService nav = NavigationService.GetNavigationService(this);
+        { //Переход с страницы повара на ЛогонЛист
+            NavigationService nav = NavigationService.GetNavigationService(this);   
             nav.Navigate(new LogonList());
         }
     }
